@@ -1,0 +1,44 @@
+{
+  "development": {
+    "username": "polinapetrenko",
+    "password": "NxR3BriSArPvuzgVs0qEulz5HrtBGQYv",
+    "database": "db_contacts_onx1",
+    "host": "dpg-d054ibhr0fns73d2b3dg-a.frankfurt-postgres.render.com",
+    "dialect": "postgres",
+    "port": 5432,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "username": "polinapetrenko",
+    "password": "NxR3BriSArPvuzgVs0qEulz5HrtBGQYv",
+    "database": "db_contacts_onx1",
+    "host": "dpg-d054ibhr0fns73d2b3dg-a.frankfurt-postgres.render.com",
+    "dialect": "postgres",
+    "port": 5432,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "production": {
+    "username": "polinapetrenko",
+    "password": "NxR3BriSArPvuzgVs0qEulz5HrtBGQYv",
+    "database": "db_contacts_onx1",
+    "host": "dpg-d054ibhr0fns73d2b3dg-a.frankfurt-postgres.render.com",
+    "dialect": "postgres",
+    "port": 5432,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
