@@ -13,6 +13,7 @@ const app = express();
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
+app.use('/avatars', express.static('public/avatars'));
 
 // Додаємо маршрут для перевірки сервера
 app.get('/', (req, res) => {
