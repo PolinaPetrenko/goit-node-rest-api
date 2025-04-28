@@ -35,7 +35,7 @@ export async function createContact(req, res, next) {
     const {name, email, phone, favorite} = req.body;
     const newContact = await contactsServices.addContact(
       {name, email, phone, favorite},
-      req.user.id // Отримуємо userId з токена
+      req.user.id
     );
     res.status(201).json(newContact);
   } catch (error) {
@@ -83,4 +83,3 @@ export default {
   deleteContact: ctrlWrapper(deleteContact),
   updateFavorite: ctrlWrapper(updateFavorite),
 };
-

@@ -19,9 +19,9 @@ const Contact = sequelize.define('contact', {
     defaultValue: false,
   },
   owner: {
-  type: DataTypes.INTEGER,
-  allowNull: false,
-}
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
 export default Contact;

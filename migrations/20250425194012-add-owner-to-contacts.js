@@ -1,8 +1,8 @@
 // Міграція для додавання колонки 'owner' до таблиці 'contacts'
 
-import { DataTypes } from 'sequelize';
+import {DataTypes} from 'sequelize';
 
-export const up = async (queryInterface) => {
+export const up = async queryInterface => {
   // Додаємо поле 'owner' до таблиці 'contacts' з можливістю бути NULL
   await queryInterface.addColumn('contacts', 'owner', {
     type: DataTypes.INTEGER,
@@ -22,7 +22,7 @@ export const up = async (queryInterface) => {
   });
 };
 
-export const down = async (queryInterface) => {
+export const down = async queryInterface => {
   // Видаляємо поле 'owner' у разі скасування міграції
   await queryInterface.removeColumn('contacts', 'owner');
 };
