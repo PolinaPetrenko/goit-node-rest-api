@@ -1,4 +1,4 @@
-import { DataTypes } from 'sequelize';
+import {DataTypes} from 'sequelize';
 
 export default {
   async up(queryInterface, Sequelize) {
@@ -7,32 +7,32 @@ export default {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
       },
       name: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
       },
       email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
       },
       phone: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
       },
       favorite: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
-        type: DataTypes.DATE
+        type: DataTypes.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: DataTypes.DATE
-      }
+        type: DataTypes.DATE,
+      },
     });
   },
 
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Contacts');
-  }
+  },
 };

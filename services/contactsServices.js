@@ -3,7 +3,7 @@ import Contact from '../db/models/contact.js';
 export async function listContacts(userId) {
   return Contact.findAll({
     where: {
-      owner: userId, 
+      owner: userId,
     },
   });
 }
@@ -30,8 +30,8 @@ export async function removeContact(contactId, userId) {
   return contact;
 }
 
-export async function addContact({ name, email, phone, favorite }, userId) {
-  return Contact.create({ name, email, phone, favorite, owner: userId });
+export async function addContact({name, email, phone, favorite}, userId) {
+  return Contact.create({name, email, phone, favorite, owner: userId});
 }
 
 export async function updateContactById(contactId, data, userId) {
@@ -43,10 +43,10 @@ export async function updateContactById(contactId, data, userId) {
   });
 }
 
-export async function updateStatusContact(contactId, { favorite }, userId) {
+export async function updateStatusContact(contactId, {favorite}, userId) {
   const contact = await getContactById(contactId, userId);
   if (!contact) return null;
 
-  await contact.update({ favorite });
+  await contact.update({favorite});
   return contact;
 }
